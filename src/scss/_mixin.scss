@@ -1,0 +1,14 @@
+//clear fix of float
+@mixin clearFix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+//responsive web page
+@mixin mediaQ($arg) {
+  @media screen and (max-width: $arg) {
+    @content;
+  }
+}

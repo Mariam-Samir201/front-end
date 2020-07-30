@@ -1,0 +1,59 @@
+.contactUs
+{
+  background-image: url(../../assets/h1_hero.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+.contact-caption{
+  margin-top: 11.5rem;
+}
+.color-blue
+{
+  color: #004b84;
+  font-weight: 800;
+}
+.brdr
+{
+border-bottom: 3px solid black ;
+width: 70px;
+padding: 5px 0 ;
+margin-bottom: 25px; ;
+}
+.contact-img img{
+  width: 350px;
+  margin-top: 42%;
+  margin-left: 46%;
+}
+.submit_btn{
+    background-image: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%);
+    background-size: 200% auto;
+    z-index: 2;
+    width: 176px;
+    padding: 0px;
+    display: inline-block;
+    transition: all 400ms ease-out;
+    text-align: center;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #fff;
+    font-size: 20px;
+    line-height: 45px;
+    border: 2px solid rgba(204, 241, 255, .5);
+    border-radius: 33px;
+    &:hover{
+        background-position: right center;
+        color: #fff;
+    }
+    &:focus{
+        box-shadow: none;
+        outline: none;
+        border: 6px solid rgba(204, 241, 255, .5);
+    }
+}

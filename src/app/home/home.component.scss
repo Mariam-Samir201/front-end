@@ -1,0 +1,53 @@
+.home{
+  background-image: url(../../assets/h1_hero.png);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+.home-img img{
+  position: absolute;
+  left: 120%;
+  width: 500px;
+}
+.home-caption{
+  position: absolute;
+  top: 90px;
+  height: 80%;
+}
+.font-blue{
+  color: #004b84;
+  font-weight: 900;
+  font-size: 3.5rem;
+  margin-bottom: 18px;
+}
+.more_btn{
+    margin-top: 10px;
+    padding: 0px 46px;
+    background-image: linear-gradient(to right, #6fbcfe 0%, #998dff 51%, #6fbcfe 100%);
+    background-size: 200% auto;
+    z-index: 2;
+    display: inline-block;
+    transition: all 400ms ease-out;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    line-height: 45px;
+    border: 4px solid rgba(204, 241, 255, .5);
+    border-radius: 33px;
+    &:hover{
+        background-position: right center;
+        color: #fff;
+    }
+}
+@media (max-width:574px){
+  .home{
+    margin-top: 25px;
+    overflow: scroll;
+  }
+}

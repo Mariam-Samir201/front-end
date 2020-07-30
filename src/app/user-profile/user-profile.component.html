@@ -1,0 +1,167 @@
+<section id="userprofile">
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav
+      #sidenav
+      mode="side"
+      [(opened)]="opened"
+      (opened)="events.push('open!')"
+      (closed)="events.push('close!')"
+      class=""
+    >
+      <div class="slid text-white text-center my-5 mb-4">
+        <div class="pt-5 justify-content-center align-items-center">
+          <img
+            src="assets/media/img_danielle.jpg"
+            alt="userprofile"
+            width="50"
+            height="50"
+            class="rounded-circle img-fluid mt-5"
+          />
+          <h5 class="text-center">danielle</h5>
+        </div>
+
+        <ul class="fa-ul text-left ml-2">
+          <li>
+            <a [routerLink]="['/usertemplets', 1]">
+              <span><i class="fas fa-columns mr-2 pt-5"></i></span>Dashboard
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/userprofile', 1]">
+              <span><i class="fas fa-bars mr-2 pt-4"></i></span> Profile
+              Settings
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/changepassword', 1]">
+              <span><i class="fas fa-unlock pt-4 mr-2"></i></span> Change
+              Password
+            </a>
+          </li>
+        </ul>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <!-- <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p> -->
+      <p class="open-nav">
+        <a mat-button (click)="sidenav.toggle()"
+          ><i class="fas fa-bars fa-2x"></i>
+        </a>
+      </p>
+
+      <div class="container">
+        <div class="col-md-12 my-2">
+          <h4 class="text-center">Your Profile Information</h4>
+          <hr />
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <form [formGroup]="userInformationForm" (ngSubmit)="changeInfo()"
+             class="py-2 mb-5  ml-5">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="username"
+                  formControlName="name"
+                  class="form-control "
+                />
+              </div>
+              <div
+                *ngIf="
+                  userInformationForm.get('name').errors &&
+                  userInformationForm.get('name').touched
+                "
+              >
+                <p class="error-message text-danger">
+                  <span class="error-icon text-danger">! </span
+                  >{{
+                    userInformationForm.get("name").errors.msg ||
+                      "Please enter an item name."
+                  }}
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  formControlName="email"
+                  class="form-control"
+                />
+              </div>
+              <div
+                *ngIf="
+                  userInformationForm.get('email').errors && userInformationForm.get('email').touched
+                "
+              >
+                <p class="error-message text-danger">
+                  <span class="error-icon text-danger">! </span
+                  >{{
+                    userInformationForm.get("email").errors.msg ||
+                      "Please enter an valid email."
+                  }}
+                </p>
+              </div>
+            
+              <!--   {{userInformationForm.valid}} -->
+              <!--   change profile image -->
+            <!--   <h5 class="mt-5">Profile Picture</h5>
+              <img
+                src="assets/media/img_danielle.jpg"
+                alt="profilepic"
+                class="img-fluid"
+              />
+              <label class="image-upload-container btn ">
+                <span>Select Image</span>
+                <input type="file" accept="image/*" (change)="onFileSelected($event)" />
+              </label> -->
+              <div class="row">
+                <div class="col-md-12">
+                  <h5 class="text-center pb-3">Profile Picture</h5>   
+                </div>    
+              <div class="col-md-6">                
+                <div class="form-group d-flex justify-content-center align-items-center h-100">
+                  <label class="image-upload-container btn ">
+                    <span class="float-right" data-toggle="tooltip" data-placement="bottom" title="Select Profile Image"> <i class="fas fa-cloud-upload-alt fa-2x"></i>
+                              
+                    </span>
+       
+                    <input type="file" name="image" accept="image/*" (change)="fileProgress($event)" />
+                  </label>
+                  </div>
+               <!--  <div *ngIf="fileUploadProgress">
+                    Upload progress: {{ fileUploadProgress }}
+                </div> -->
+                    
+              <!--   <div class="mb-3" *ngIf="uploadedFilePath">
+                    {{uploadedFilePath}}
+                </div> 
+                  -->
+                </div>
+                <div class="col-md-6">
+                  <div class="image-preview mb-3" *ngIf="previewUrl">
+                    <img [src]="previewUrl" height="200px" width="200px" class="img-fluid" />                 
+                </div>
+                </div>
+            </div> 
+            <div class="input-group-append d-flex align-items-center text-center justify-content-center">
+              <button
+                type="button"
+                class="btn btn-outline-primary "
+                type="submit"
+                [disabled]="!userInformationForm.valid"
+                (click)="onSubmit()"
+              >
+                save
+              </button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</section>

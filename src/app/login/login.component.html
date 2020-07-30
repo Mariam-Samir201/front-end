@@ -1,0 +1,69 @@
+
+<section id="loginform" >
+      <div class=" container pt-5 text-center">
+        <div class=" row align-items-center ">
+        <div class="col-md-5 pt-5 ">
+           
+            
+         <!-- reactive Form in  angular -->
+          <form (ngSubmit)="login()" [formGroup]="signinForm" class="mt-5 " >
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control ng-valid required mb-4"
+                id="email"
+                formControlName="email"
+                placeholder="E-mail"
+              />
+              <div
+              *ngIf="signinForm.controls.email.invalid && signinForm.controls.email.touched"
+              class="alert alert-danger"
+            >
+            email not valid
+            </div>
+            </div>
+    
+            <div class="form-group ">
+              <input
+              formControlName="password"
+                type="password"
+                class="form-control ng-valid mb-4"
+                id="password"
+                placeholder="Password"
+                
+              />
+              <div
+              *ngIf="signinForm.controls.password.invalid && signinForm.controls.password.touched"
+              class="alert alert-danger"
+            >
+       A minimum 8 characters password contains a combination of uppercase and lowercase letter and number are required 
+
+            </div>
+            </div>
+            <div class="form-check ">
+                <input  class="form-check-input" type="checkbox" id="inlineCheckbox1" value="remember">
+                <label class="form-check-label" for="inlineCheckbox1">Remember Me</label>
+              </div>
+          
+            <button
+              type="submit"
+              class="btn btn-primary px-5 my-4"
+             [disabled]="signinForm.invalid"          
+            >
+              Login
+            </button>
+            <div class="mt-2 clearfix">
+              <a routerLink="/resetpassword" class="float-left">Forget Password?</a>
+              <a class="float-right" routerLink="/signup">New User</a>
+
+            </div>
+          </form>
+        </div>
+      
+      <div class="col-md-6 offset-1">
+        <img class ="w-100" src="assets/media/2994072.jpg" alt="">
+      </div>
+</div>
+    
+    </div>
+</section>

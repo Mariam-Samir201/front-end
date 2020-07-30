@@ -1,0 +1,52 @@
+<section id="signup" class="h-100" >
+    <div class="container text-center pt-2">
+        <h2 class="text-dark ">Sign Up</h2>
+        <p class="text-dark">Already have a  account? <a routerLink="/login" routerActive="Active">Log In</a></p>
+    
+        <div class="row mt-3 h-75">
+
+      
+        <div class="col-md-6"><img class="w-100" src="assets/media/about_hero.png" alt=""></div>
+        <div class="col-md-4 offset-2 bg-transparent border-0 py-5 mt-4  ">
+            <form [formGroup]='siginupForm' (ngSubmit)="onSubmit()">
+                <input  formControlName='first'  class= "form-control mb-3 border-bottom"  placeholder="First Name">
+                <span 
+                *ngIf="siginupForm.controls.first.invalid&&siginupForm.controls.first.touched"
+                class=" my-2 d-block alert alert-danger">
+                   invalid name</span>
+
+
+                <input formControlName='last'  class="form-control mb-3" placeholder="Last Name">
+                <span 
+                *ngIf="siginupForm.controls.last.invalid&&siginupForm.controls.last.touched"
+                class=" my-2 d-block alert alert-danger">
+                   invalid name</span>
+
+                <input  formControlName='password' class="form-control mb-3"   placeholder="Password">
+                <span 
+                *ngIf="siginupForm.controls.password.invalid&&siginupForm.controls.password.touched"
+                class=" my-2 d-block alert alert-danger">
+
+                A minimum 8 characters password contains a combination of uppercase and lowercase letter and number are required.</span>
+                <input  formControlName='repassword' class="form-control mb-3" placeholder="Repear Password">
+                <span 
+                *ngIf="siginupForm.controls.password.value!==siginupForm.controls.repassword.value&&siginupForm.controls.repassword.touched"
+                class=" my-2 d-block alert alert-danger">
+                Password and confirm password does not match.</span>
+                <input  formControlName='email' class="form-control mb-3" placeholder="Email">
+                <span 
+                *ngIf="siginupForm.controls.email.invalid&&siginupForm.controls.email.touched"
+                class=" my-2 d-block alert alert-danger">
+                   invalid email</span>
+                <button  [disabled]="siginupForm.invalid" class="btn btn-primary float-left ml-2" type="submit">submit</button>
+                <div class="float-right">
+                <a href="#" class="facebook p-3"><i class="fab fa-facebook-f p-2  fa-2x "></i> </a>
+                <a href="#" class="google p-3"> <i class="fab fa-google fa-2x "></i></a></div>
+            </form>
+        </div>
+    </div>
+    </div>    
+    </section>
+    
+    
+    

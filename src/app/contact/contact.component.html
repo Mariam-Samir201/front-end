@@ -1,0 +1,40 @@
+<div class="contactUs">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-5 animate__animated animate__slideInLeft animate__slow	0.5s">
+      <div class="contact-caption">
+      <h1 class="color-blue">Lorem ipsum dolor</h1>
+      <div class="brdr"></div>
+
+      <form [formGroup]='contactForm' (ngSubmit)='contact(contactForm)'>
+
+
+        <div class="form-group">
+        <input [class.is-invalid]="contactForm.get('full_name').invalid == true && contactForm.get('full_name').touched == true"
+        formControlName='full_name' class="form-control my-1" type="text" placeholder="Enter Your Full Name">
+        <div *ngIf = "contactForm.get('full_name').invalid == true && contactForm.get('full_name').touched == true"
+        class="alert alert-danger">Your Name not valid </div>
+        </div>
+
+
+        <div class="form-group">
+          <input
+            [class.is-invalid]="contactForm.get('email').invalid == true && contactForm.get('email').touched == true"
+            formControlName='email' class="form-control my-1" type="email" placeholder="Enter Your Email">
+          <div *ngIf="contactForm.get('email').invalid == true && contactForm.get('email').touched == true"
+            class="alert alert-danger">Your email not valid </div>
+        </div>
+
+        <textarea class="form-control" cols="30" rows="6" placeholder=" Your Message"></textarea>
+        <button [disabled]='contactForm.invalid == true' class="btn submit_btn mt-3 animate__animated animate__slideInLeft animate__slow	1s" type="submit"> Submit</button>
+
+      </form>
+
+      </div>
+    </div>
+    <div class="col-md-5 contact-img animate__animated animate__slideInRight animate__slow	0.5s">
+      <img src="../../assets/mail.png">
+    </div>
+    </div>
+  </div>
+</div>

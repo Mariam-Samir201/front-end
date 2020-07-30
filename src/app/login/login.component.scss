@@ -1,0 +1,54 @@
+@import '../../scss/variables';
+@import '../../scss/mixin';
+
+
+nav{background-color: $colordark}
+a {
+  text-decoration: none;
+  color: $colorblue;
+  cursor: pointer;
+} 
+input{ -webkit-box-shadow: 0px 0px 30px -8px rgba(70,71,87,0.39);
+  -moz-box-shadow: 0px 0px 30px -8px rgba(70,71,87,0.39);
+  box-shadow: 0px 0px 30px -8px rgba(70,71,87,0.39);}
+
+#loginform {
+  min-height: 85vh;
+
+
+
+background-repeat: no-repeat;
+  button {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+
+  .caption {
+    border: 1px solid $colordark;
+    
+    .line-image {
+      img{
+      width:100px;}
+     
+    
+}
+    a{
+        font-size: 15px;
+        @include mediaQ(600){
+            //font-size: 15px;
+        }
+    }
+    label{
+      font-size: 15px;
+    }
+  }
+  .form-check {
+    text-align: start;
+    label {    
+      color: $colorblue;
+    }
+  }
+}

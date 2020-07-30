@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-sm navbar-light">
+  <div class="container-fluid pt-2">
+
+  <a class="navbar-brand mx-5 " href="#">Navbar</a>
+  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+      aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive='active' routerLink ='/home'>Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive='active' routerLink ='/templates'>Templates</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive='active' routerLink ='/team'>Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLinkActive='active' routerLink ='/contact'>Contact</a>
+      </li>
+
+      <!--  fatma edit user profile appear when user login-->
+      <li class="nav-item" *ngIf="!checklogin()">
+        <button class=" btn more_btn" routerLinkActive="active" routerLink="/login">LogIn</button>
+      </li>
+
+      <li class="nav-item dropdown" *ngIf="checklogin()">
+        <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <a [routerLink]="['/userprofile', 1]">
+            <img src="assets/media/img_danielle.jpg" width="50px" class="rounded-circle img-fluid" alt="profileimg"
+              *ngIf="checklogin()" />
+          </a>
+          <i class="fas fa-sliders-h ml-2"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/userprofile', 1]">Your Profile</a>
+          <a class="dropdown-item" [routerLink]="['/usertemplets', 1]">Your Templetes</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="login" (click)="logOut()"> <span *ngIf="checklogin()">Log Out</span>
+            <span *ngIf="!checklogin()">Log in</span></a>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+
+  </div>
+</nav>

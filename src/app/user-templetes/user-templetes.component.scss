@@ -1,0 +1,133 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+#usertemplets{
+    .open-nav{
+        position: fixed;
+        top:50%;
+      }
+    a{
+        text-decoration: none;      
+        cursor: pointer;
+      }
+    .example-container {
+        position: absolute;
+        top: 100px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      
+       
+      }
+      mat-sidenav{
+       background-color: $colordark;; 
+        width: 200px;
+       }
+      .slid{
+       a{
+        color: #fff;
+       }
+     
+       
+      }
+
+.usertempletes{
+  .item {
+    &:hover {
+      .image-container {
+        display: flex;
+      }
+    }
+  }
+  .all a {
+    color: black;
+  }
+  .all {
+    a {
+      &:hover {
+        color: #ff2978;
+      }
+    }
+  }
+  .image-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+  }
+  i {
+    width: 50px;
+    padding-top: 18px;
+    height: 50px;
+    text-align: center;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+  }
+  .icon11 {
+    position: absolute;
+    top: -24px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff2978;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    display: none;
+  }
+  .icon12 {
+    position: absolute;
+    top: -42px;
+    left: -20px;
+    padding: 7px;
+    background-color: #ff2978;
+    display: none;
+  }
+  .icon2 {
+    &:hover {
+      .icon21 {
+        display: block;
+      }
+      .icon22 {
+        display: block;
+      }
+    }
+  }
+  .icon21 {
+    position: absolute;
+    top: -24px;
+    left: 73px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff2978;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    display: none;
+  }
+  .icon22 {
+    position: absolute;
+    top: -42px;
+    right: -30px;
+    padding: 7px;
+    background-color: #ff2978;
+    display: none;
+  }
+}
+     
+}
+
+ 

@@ -1,0 +1,26 @@
+#edituserTemplete{
+.flex-main{
+    display: flex;
+    flex: 1;
+    height: 100vh;
+}
+.setting{
+    background-color: #09c;
+      flex: 1  1  4rem;
+}
+.sitepreview{
+    flex: 4 4 ;
+
+}
+@media all and (max-width: 540px) {
+    .flex-main{
+        flex-direction: column;
+    }
+}
+}
+html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+  }

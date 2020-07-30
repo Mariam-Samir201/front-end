@@ -1,0 +1,71 @@
+.navbar {
+  z-index: 999999999999;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.space {
+  margin-right: 20px;
+}
+@media screen and (min-width: 760px) and (max-width: 870px) {
+  .navbar-light .navbar-nav .nav-link {
+    padding: 10px 15px;
+  }
+  .space {
+    margin-right: 15px;
+  }
+}
+@media screen and (min-width: 574px) and (max-width: 672px) {
+  .navbar-light .navbar-nav .nav-link {
+    padding: 10px 5px;
+    font-size: 16px;
+  }
+  .space {
+    margin-right: 8px;
+  }
+}
+@media screen and (min-width: 672px) and (max-width: 769px) {
+  .navbar-light .navbar-nav .nav-link {
+    padding: 10px 10px;
+    font-size: 16px;
+  }
+  .space {
+    margin-right: 12px;
+  }
+}
+
+.navbar-light .navbar-nav li a:hover {
+  color: #ff2978;
+}
+.navbar-light .navbar-brand {
+  color: #004f87;
+  font-size: 30px;
+  font-weight: 900;
+  padding-top: 12px;
+}
+
+.more_btn{
+    background-image: linear-gradient(to right, #6fbcfe 0%, #998dff 51%, #6fbcfe 100%);
+    z-index: 2;
+    display: inline-block;
+    transition: all 400ms ease-out;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    border: 3px solid rgba(204, 241, 255, .5);
+    &:hover{
+        background-position: right center;
+        color: #fff;
+    }
+}
+
+
+@media (max-width: 574px) {
+  .navbar-light .navbar-nav .nav-item .nav-link {
+    background-color: #7c9ac8;
+
+  }
+}

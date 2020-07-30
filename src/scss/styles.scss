@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+//form style reqired input
+
+@import 'variables';
+@import '_mixin';
+
+/* .ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid #42a948;
+}
+
+.ng-invalid:not(form),input.ng-invalid.ng-touched {
+  border-left: 5px solid #a94442;
+} */
+
+body{
+  font-family: 'Muli', sans-serif;
+  color: $colordark;
+/*   overflow: hidden; */  //to show scroll in other pages
+}
+p{
+
+  color:#707b8e;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: normal;
+}
+h1,h2,h3,h4,h5{
+color: #2b4b80;
+font-weight: 500;
+font-weight: normal;
+}
+.logo {
+  font-family: 'Abril Fatface', cursive;}
+
+
